@@ -1,0 +1,25 @@
+﻿@using System.Web.UI.WebControls;
+@using Stimulsoft.Report.Mvc;
+
+@{
+    ViewBag.Title = "نمونه گزارش";
+}
+@*<script src="~/Scripts/jquery-1.7.1.min.js"></script>*@
+<div>
+
+    @Html.Stimulsoft().StiMvcViewer("MyViewr", new StiMvcViewerOptions()
+
+{
+    ActionGetReportSnapshot = "FromLoadFileReport",
+    ActionViewerEvent = "ViewerEvent",
+    Width = Unit.Percentage(100),
+    Theme = StiTheme.Office2013,
+    ActionPrintReport = "PrintReport",
+    ActionExportReport = "ExportReport",
+    ToolbarBackgroundColor = System.Drawing.Color.Azure,
+    //Appearance =
+    //{
+    //    FullScreenMode = true
+    //}
+})
+</div>
